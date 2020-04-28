@@ -103,3 +103,17 @@ NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 
 Started POST "/__better_errors/e7f902decd72572e/variables" for ::1 at 2020-04-27 16:47:32 -0700
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jasonwintery/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/" for ::1 at 2020-04-27 17:28:17 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 104ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/7095b51f11a7466f/variables" for ::1 at 2020-04-27 17:28:17 -0700
