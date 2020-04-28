@@ -480,3 +480,10 @@ NoMethodError - undefined method `error' for #<User:0x00007f84931a4298>
 Did you mean?  errors:
   app/controllers/api/users_controller.rb:9:in `create'
 
+Started GET "/" for ::1 at 2020-04-28 16:24:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 298ms (Views: 295.0ms | ActiveRecord: 0.0ms)
+
+
