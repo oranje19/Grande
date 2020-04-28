@@ -147,3 +147,101 @@ request.variant: []
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
 
 Started POST "/__better_errors/c788c74fda2e8aad/variables" for ::1 at 2020-04-28 10:12:57 -0700
+Started GET "/" for ::1 at 2020-04-28 13:55:11 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 113ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/ab57f78940fd272e/variables" for ::1 at 2020-04-28 13:55:12 -0700
+Started GET "/" for ::1 at 2020-04-28 13:55:14 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 112ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/6d69b5dfb2e0c051/variables" for ::1 at 2020-04-28 13:55:14 -0700
+Started GET "/" for ::1 at 2020-04-28 13:58:39 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 109ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/3014b751818fc071/variables" for ::1 at 2020-04-28 13:58:39 -0700
+Started GET "/" for ::1 at 2020-04-28 13:58:40 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 110ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/0ce2c72c2f5d630f/variables" for ::1 at 2020-04-28 13:58:41 -0700
+Started GET "/" for ::1 at 2020-04-28 14:20:44 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 110ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/d7d97796786a0547/variables" for ::1 at 2020-04-28 14:20:44 -0700
+Started GET "/" for ::1 at 2020-04-28 14:55:30 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 117ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/3f89533605977151/variables" for ::1 at 2020-04-28 14:55:31 -0700
+Started GET "/" for ::1 at 2020-04-28 14:55:32 -0700
+Processing by StaticPagesController#root as HTML
+Completed 406 Not Acceptable in 108ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UnknownFormat - StaticPagesController#root is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.:
+
+Started POST "/__better_errors/fd09526b485f547f/variables" for ::1 at 2020-04-28 14:55:32 -0700
