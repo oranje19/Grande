@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom';
 
 const App = () => (
-    <div>
+    <div className="grande">
         <header>
             <h1>Grande</h1>
             <GreetingContainer />

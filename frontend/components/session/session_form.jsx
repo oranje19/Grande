@@ -8,13 +8,24 @@ class SessionForm extends React.Component {
             email: '',
             password: ''
         };
+        this.demoUser = {
+            username: 'demo_user',
+            email: 'demouser@grande.io',
+            password: 'demo12345'
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    }
+
+    demoLogin(e) {
+        e.preventDefault();
+        this.props.processDemo(this.demoUser);
     }
 
     handleSubmit(e) {
@@ -46,6 +57,7 @@ class SessionForm extends React.Component {
                         value={this.state.email}
                         onChange={this.update('email')}
                         className="login-input"
+                        placeholder="Email"
                     />
                     <br />
                 </label>
@@ -68,6 +80,7 @@ class SessionForm extends React.Component {
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
+                                placeholder="Username"
                             />
                         </label>
                         <br/>
@@ -77,10 +90,13 @@ class SessionForm extends React.Component {
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
+                                placeholder="Password"
                             />
                         </label>
                         <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
+                        <br/>
+                        <button className="demo_user" onClick={this.demoLogin}>User Demo</button>
                     </div>
                 </form>
             </div>
