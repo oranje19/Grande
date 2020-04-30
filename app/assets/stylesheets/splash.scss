@@ -1,0 +1,45 @@
+.splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.splash > h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    width: 90%;
+    color:black;
+    margin-bottom: 30px;
+}
+
+.splash-page-1 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 25px;
+    line-height: 20px;
+}
+
+.splash-btn-1 {
+    background-color: rgb(3, 168, 124);
+    color: white;
+    width: 340px;
+    height: 62px;
+    font-size: 20px;
+}
+
+.splash-page-2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.splash-btn-2 {
+    color: rgba(2, 158, 116, 1);
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+}
