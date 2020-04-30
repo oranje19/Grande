@@ -25,7 +25,8 @@ class SessionForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        this.props.processDemo(this.demoUser);
+        this.props.processDemo(this.demoUser)
+
     }
 
     handleSubmit(e) {
@@ -66,41 +67,94 @@ class SessionForm extends React.Component {
             email = null;
         }
 
+        const { formType, otherForm, closeModal } = this.props;
+
+        const message = formType === 'Sign Up' ? 'Already have an account?' : "No account?";
+        const button_text = formType === 'Sign Up' ? 'Sign up' : 'Log in';
+        const intro = formType === 'Sign Up' 
+            ? 'Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.'
+            : 'Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.'
+
         return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Grande!
-                    <br/>
-                    Please {this.props.formType} or {this.props.navLink} instead
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br/>
-                        <label>Username:
+            <div className="modal-child">
+                <div onClick={closeModal} className="close-x">
+                    &times;
+                </div>
+                <div className="modal-content">
+                    <div className="modal-title">{formType}</div>
+                    <div className="modal-intro">{intro}</div>
+                    <div className="modal-quote">Be the Star</div>
+                    <ul>{this.renderErrors()}</ul>
+                    <form className="modal-form" onSubmit={this.handleSubmit}>
+                        <div className="session-info">
+                            <label htmlFor="username">Username</label>
                             <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
-                                className="login-input"
                                 placeholder="Username"
+                                className="modal-input"
                             />
-                        </label>
+                        </div>
                         <br/>
-                        {email}
-                        <label>Password:
+                        <div className="session-info">
+                            <label htmlFor="password">Password</label>
                             <input type="password"
                                 value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
+                                onChange={this.update("password")}
                                 placeholder="Password"
+                                className="modal-input"
                             />
-                        </label>
+                        </div>
                         <br/>
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                        <br/>
-                        <button className="demo_user" onClick={this.demoLogin}>User Demo</button>
+                        <input type="submit" className="modal-submit" value={button_text} />
+                    </form>
+                    <button className="modal-submit-demo" onClick={this.demoLogin}>
+                        Demo User
+                    </button>
+
+                    <div className="modal-bottom">
+                        {message}
+                        <div className="modal-switch">{otherForm}</div>
                     </div>
-                </form>
+                </div>
             </div>
         )
+
+        // return (
+        //     <div className="login-form-container">
+        //         <form onSubmit={this.handleSubmit} className="login-form-box">
+        //             Welcome to Grande!
+        //             <br/>
+        //             Please {this.props.formType} or {this.props.navLink} instead
+        //             {this.renderErrors()}
+        //             <div className="login-form">
+        //                 <br/>
+        //                 <label>Username:
+        //                     <input type="text"
+        //                         value={this.state.username}
+        //                         onChange={this.update('username')}
+        //                         className="login-input"
+        //                         placeholder="Username"
+        //                     />
+        //                 </label>
+        //                 <br/>
+        //                 {email}
+        //                 <label>Password:
+        //                     <input type="password"
+        //                         value={this.state.password}
+        //                         onChange={this.update('password')}
+        //                         className="login-input"
+        //                         placeholder="Password"
+        //                     />
+        //                 </label>
+        //                 <br/>
+        //                 <input className="session-submit" type="submit" value={this.props.formType} />
+        //                 <br/>
+        //                 <button className="demo_user" onClick={this.demoLogin}>User Demo</button>
+        //             </div>
+        //         </form>
+        //     </div>
+        // )
     }
 }
 
