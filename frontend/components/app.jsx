@@ -1,8 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import GreetingContainer from './greeting/greeting_container';
-import LoginFormContainer from './session/login_form_container'
-import SignupFormContainer from './session/signup_form_container'
+import LoginFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/signup_form_container';
+import SplashFormContainer from './splash/splash_form_container';
 import {
     Route,
     Redirect,
@@ -17,6 +18,8 @@ const App = () => (
             <h1>Grande</h1>
             <GreetingContainer />
         </header>
+
+        <Route exact path="/" component={SplashFormContainer} />
 
         <Route path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />

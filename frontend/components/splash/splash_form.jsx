@@ -24,9 +24,11 @@ class Splash extends React.Component {
                         </div>
                     </div>
                 </li>
-                
+
             </ul>
         )
     }
 
 }
+
+export default Splash;
