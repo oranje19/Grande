@@ -29,12 +29,17 @@
     width: 340px;
     height: 62px;
     font-size: 20px;
+    padding: 8px 16px 8px 16px ;
+    border: 1px solid rgb(3, 168, 124);
+    margin-top: 15px;
+    border-radius: 3px;
 }
 
 .splash-page-2 {
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .splash-btn-2 {
@@ -42,4 +47,39 @@
     background-color: transparent;
     border: none;
     font-size: 15px;
+}
+
+.splash-check-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.splash-check-list > li:nth-child(3) {
+    margin-right: 30px;
+}
+
+
+.splash-green-check > div {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.54);
+}
+                            
+.splash-sub-title {
+    font-size: 22px;
+    display: flex;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: 550;
+    margin-bottom: 25px;
+}
+
+.splash-sub-message {
+    font-size: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+
 }
