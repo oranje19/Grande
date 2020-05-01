@@ -4,6 +4,7 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import SplashFormContainer from './splash/splash_form_container';
+import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar_form_container';
 import {
@@ -17,7 +18,7 @@ import {
 const App = () => (
     <div className="grande">
         <header>
-            <h1>Grande</h1>
+            <h1 className="top-left-title">Grande</h1>
             <GreetingContainer />
         </header>
 
@@ -27,7 +28,7 @@ const App = () => (
 
         <Route exact path="/" component={SplashFormContainer} />
 
-        <Route path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
 
     </div>

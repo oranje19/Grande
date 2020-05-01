@@ -7,7 +7,7 @@
 
 .splash > h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 85px;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
@@ -17,10 +17,11 @@
 }
 
 .splash-page-1 {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
     margin-top: 25px;
     line-height: 20px;
+    margin-bottom: 20px;
 }
 
 .splash-btn-1 {
@@ -40,6 +41,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .splash-btn-2 {
@@ -47,6 +49,7 @@
     background-color: transparent;
     border: none;
     font-size: 15px;
+    
 }
 
 .splash-check-list {
@@ -70,16 +73,31 @@
                             
 .splash-sub-title {
     font-size: 22px;
-    display: flex;
+    // display: flex;
     margin-top: 25px;
     text-align: center;
     font-weight: 550;
     margin-bottom: 25px;
 }
 
-.splash-sub-message {
+.splash-span-1 {
+    align-self: flex-start;
+    align-content: left;
+}
+
+.splash-sub-message-1 {
     font-size: 70px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 60px;
     text-align: left;
-
 }
+
+.splash-sub-message-2 {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 32px;
+    align-self: flex-start;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+

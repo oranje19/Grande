@@ -56,7 +56,7 @@ class NavBar extends React.Component {
         let { currentUser } = this.props;
 
         return (
-            <div classNmae="dropdown-box">
+            <div className="dropdown-box">
                 <button className="current-user-name" onClick={this.handleSubmit}>
                     {currentUser.username[0].toUpperCase()}
                 </button>

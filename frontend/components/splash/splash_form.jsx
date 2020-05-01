@@ -11,7 +11,7 @@ class Splash extends React.Component {
                 <p className="splash-page-1">
                     Select what you're into. We'll help you find great things to read.
                 </p>
-                <span>
+                <li>
                     <div>
                         <button className="splash-btn-1" onClick={openModal}>
                             Get started
@@ -23,8 +23,8 @@ class Splash extends React.Component {
                             </button>
                         </div>
                     </div>
-                </span>
-                <span>
+                </li>
+                <li>
                     <ul className="splash-check-list">
                         <li className="splash-green-check">
                             <div>
@@ -46,12 +46,17 @@ class Splash extends React.Component {
                     <ul className="splash-sub-title">
                         All on Grande, all for you.
                     </ul>
-                </span>
-                <span>
+                </li>
+                <li>
                     <div className="splash-sub-1">
-                        <div className="splash-sub-message">No ads. No problems.</div>
+                        <div className="splash-sub-message-1">No ads. No problems.</div>
                     </div>
-                </span>
+                </li>
+                <li>
+                    <div className="splash-sub-2">
+                        <div className="splash-sub-message-2">Your privacy stays yours. We don't sell your data or target you with ads. Ever.</div>
+                    </div>
+                </li>
             </ul>
         )
     }
