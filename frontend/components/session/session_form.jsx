@@ -26,6 +26,7 @@ class SessionForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         this.props.processDemo(this.demoUser)
+            .then(() => (this.props.closeModal()))
 
     }
 
@@ -85,7 +86,9 @@ class SessionForm extends React.Component {
                     <div className="modal-title">Grande Star</div>
                     <div className="modal-intro">{intro}</div>
                     <div className="modal-quote">Be the Star</div>
+                    <br/>
                     <ul>{this.renderErrors()}</ul>
+                    <br/>
                     <form className="modal-form" onSubmit={this.handleSubmit}>
                         <div className="session-info">
                             <label htmlFor="username">Username</label>
@@ -96,7 +99,10 @@ class SessionForm extends React.Component {
                                 className="modal-input"
                             />
                         </div>
-                        <br/>
+                        {/* <br/> */}
+                        <div className="session-info">
+                            {email}
+                        </div>
                         <div className="session-info">
                             <label htmlFor="password">Password</label>
                             <input type="password"
