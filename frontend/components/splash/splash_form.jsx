@@ -50,13 +50,35 @@ class Splash extends React.Component {
                 <li>
                     <div className="splash-sub-1">
                         <div className="splash-sub-message-1">No ads. No problems.</div>
-                    </div>
-                </li>
-                <li>
-                    <div className="splash-sub-2">
                         <div className="splash-sub-message-2">Your privacy stays yours. We don't sell your data or target you with ads. Ever.</div>
                     </div>
                 </li>
+                <li>
+                    {/* <div className="splash-sub-2">
+                    </div> */}
+                    <div className="splash-sub-3">
+                        <div className="splash-sub-3-btn">
+                            <button className="splash-btn-3" onClick={openModal}>Get started</button>
+                        </div>
+                        <div className="splash-sub-3-header">
+                            <div className="splash-sub-3-title">We do things differently.</div>
+                            <div className="splash-sub-3-message">
+                                Grande is not like any other platform on the internet. <mark>Our sole purpose is to help you find compelling 
+                                ideas, knowledge, and perspectives.</mark> We don't serve ads—we serve you, the curious 
+                                reader who loves to learn new things. Grande is
+                                home to thousands of independent voices, and
+                                we combine humans and technology to find the 
+                                best reading for you—and filter out the rest.
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li className="splash-sub-4">
+                    <div className="splash-sub-message-4">Expand your reading. Expand your mind.</div>
+                </li>
+                <button className="splash-btn-1" onClick={openModal}>
+                    Get started
+                </button>
             </ul>
         )
     }

@@ -32,7 +32,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+            .then(() => (this.props.closeModal()))
     }
 
     renderErrors() {
@@ -81,7 +82,7 @@ class SessionForm extends React.Component {
                     &times;
                 </div>
                 <div className="modal-content">
-                    <div className="modal-title">{formType}</div>
+                    <div className="modal-title">Grande Star</div>
                     <div className="modal-intro">{intro}</div>
                     <div className="modal-quote">Be the Star</div>
                     <ul>{this.renderErrors()}</ul>

@@ -21,7 +21,7 @@ const mapDispatchToProps = dispatch => {
         otherForm: (
             <button onClick={() => {
                 dispatch(openModal("login"))
-                dispatch(clearErrors)
+                dispatch(clearErrors())
             }}>Sign in
             </button>
         ),

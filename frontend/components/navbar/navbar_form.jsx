@@ -49,7 +49,7 @@ class NavBar extends React.Component {
                 <h1 className="top-left-title">Grande</h1>
                 <div className="session-btn-2">
                     <button id="login-btn" onClick={() => openModal("login")}>Sign in</button>
-                    <button id="signup-btn" onClick={() => openModal("signup")}>Get Started</button>
+                    <button id="signup-btn" onClick={() => openModal("signup")}>Get started</button>
                 </div>
             </div>
         );
