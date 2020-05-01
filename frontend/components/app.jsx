@@ -17,14 +17,15 @@ import {
 
 const App = () => (
     <div className="grande">
+        <NavBar />
+        
         <header>
-            <h1 className="top-left-title">Grande</h1>
+            {/* <h1 className="top-left-title">Grande</h1> */}
             <GreetingContainer />
         </header>
 
         <Modal />
 
-        <NavBar />
 
         <Route exact path="/" component={SplashFormContainer} />
 

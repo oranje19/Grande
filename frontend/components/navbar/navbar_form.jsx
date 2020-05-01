@@ -46,8 +46,11 @@ class NavBar extends React.Component {
         const { openModal } = this.props;
         return (
             <div className="session-btn">
-                <button id="login-btn" onClick={() => openModal("login")}>Sign in</button>
-                <button id="signup-btn" onClick={() => openModal("signup")}>Get Started</button>
+                <h1 className="top-left-title">Grande</h1>
+                <div className="session-btn-2">
+                    <button id="login-btn" onClick={() => openModal("login")}>Sign in</button>
+                    <button id="signup-btn" onClick={() => openModal("signup")}>Get Started</button>
+                </div>
             </div>
         );
     }
@@ -57,6 +60,7 @@ class NavBar extends React.Component {
 
         return (
             <div className="dropdown-box">
+                <h1 className="top-left-title">Grande</h1>
                 <button className="current-user-name" onClick={this.handleSubmit}>
                     {currentUser.username[0].toUpperCase()}
                 </button>
