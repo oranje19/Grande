@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     position: fixed;
+    height: 76px;
+    width: 1450px;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .session-btn-2 {
@@ -12,11 +15,13 @@
 }
 
 #login-btn {
-    align-content: flex-start;
+    align-content: flex-end;
     height: 36px;
     font-size: 15px;
     background-color: transparent;
     border: none;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 #signup-btn {
@@ -30,4 +35,6 @@
     justify-content: flex-end;
     // margin-right: 100px;
     font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
 }
