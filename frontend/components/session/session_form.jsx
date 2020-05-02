@@ -55,11 +55,11 @@ class SessionForm extends React.Component {
 
         if (this.props.formType === 'Sign Up') {
             email = (
-                <label>Email:
+                <label>Email
                             <input type="text"
                         value={this.state.email}
                         onChange={this.update('email')}
-                        className="login-input"
+                        className="modal-input"
                         placeholder="Email"
                     />
                     <br />
@@ -76,6 +76,7 @@ class SessionForm extends React.Component {
         const intro = formType === 'Sign Up' 
             ? 'Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.'
             : 'Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.'
+        const login_intro = formType === 'Sign Up' ? 'Join Grande.' : 'Welcome back.'
 
         return (
             <div className="modal-child">
@@ -83,9 +84,9 @@ class SessionForm extends React.Component {
                     &times;
                 </div>
                 <div className="modal-content">
-                    <div className="modal-title">Grande Star</div>
+                    <div className="modal-title">{login_intro}</div>
                     <div className="modal-intro">{intro}</div>
-                    <div className="modal-quote">Be the Star</div>
+                    <div className="modal-quote">Be the Star.</div>
                     <br/>
                     <ul>{this.renderErrors()}</ul>
                     <br/>

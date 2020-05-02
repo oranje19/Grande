@@ -76,7 +76,7 @@ class Splash extends React.Component {
                 <li className="splash-sub-4">
                     <div className="splash-sub-message-4">Expand your reading. Expand your mind.</div>
                 </li>
-                <button className="splash-btn-1" onClick={openModal}>
+                <button className="splash-btn-4" onClick={openModal}>
                     Get started
                 </button>
             </ul>

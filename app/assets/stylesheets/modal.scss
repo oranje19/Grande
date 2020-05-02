@@ -45,3 +45,123 @@
   color: black;
   cursor: pointer;
 }
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.modal-title {
+    font-size: 28px;
+}
+
+.modal-intro {
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.modal-quote {
+    font-size: 28px;
+    margin-top: 25px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+}
+
+.session-info {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    font-size: 16px;
+    // border: 1px solid grey;
+    // padding: 8px 16px 8px 16px;
+    text-align: center;
+}
+
+.modal-input {
+
+}
+
+.modal-submit {
+    // align-content: flex-end;
+    // height: 36px;
+    // font-size: 15px;
+    // background-color: transparent;
+    // border: none;
+    // margin-top: 20px;
+    // cursor: pointer;
+    color: rgba(2, 158, 116, 1);
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    // align-items: center;
+    margin-left: -2px;
+    cursor: pointer;
+    // margin-top: 10px;
+}
+
+.modal-submit-demo {
+    // align-content: flex-end;
+    // height: 36px;
+    // font-size: 15px;
+    // background-color: transparent;
+    // border: none;
+    // margin-top: 20px;
+    // cursor: pointer;
+    color: rgba(2, 158, 116, 1);
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    // align-items: center;
+    margin-left: -2px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-bottom {
+    font-size: 15px;
+    width: 300px;
+    // align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+// .modal-switch {
+//     // align-content: flex-end;
+//     // height: 36px;
+//     // font-size: 15px;
+//     // background-color: transparent;
+//     // border: none;
+//     // margin-top: 20px;
+//     // cursor: pointer;
+//     color: rgba(2, 158, 116, 1);
+//     background-color: transparent;
+//     border: none;
+//     font-size: 15px;
+//     // align-items: center;
+//     margin-left: -2px;
+//     cursor: pointer;
+// }
+
+.modal-switch-btn {
+    color: rgba(2, 158, 116, 1);
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    // align-items: center;
+    margin-left: -2px;
+    cursor: pointer;
+}
