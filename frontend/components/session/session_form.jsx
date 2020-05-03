@@ -55,15 +55,18 @@ class SessionForm extends React.Component {
 
         if (this.props.formType === 'Sign Up') {
             email = (
-                <label>Email
-                            <input type="text"
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                        className="modal-input"
-                        placeholder="Email"
-                    />
+                <div className="session-info">
+                    <label htmlFor="email">Email</label>
+                    <br/>
+                        <input type="text"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="modal-input"
+                            // placeholder="Email"
+                        />
                     <br />
-                </label>
+                </div>
+                
             )
         } else {
             email = null;
@@ -96,20 +99,20 @@ class SessionForm extends React.Component {
                             <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
-                                placeholder="Username"
+                                // placeholder="Username"
                                 className="modal-input"
                             />
                         </div>
                         {/* <br/> */}
-                        <div className="session-info">
+                        {/* <div className="session-info"> */}
                             {email}
-                        </div>
+                        {/* </div> */}
                         <div className="session-info">
                             <label htmlFor="password">Password</label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update("password")}
-                                placeholder="Password"
+                                // placeholder="Password"
                                 className="modal-input"
                             />
                         </div>

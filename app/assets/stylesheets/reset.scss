@@ -62,3 +62,9 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
