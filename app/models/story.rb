@@ -14,4 +14,11 @@ class Story < ApplicationRecord
     validates :title, :body, presence: true
     validates :author_id, :category_id, presence: true
 
+
+
+    # def comment_by_authors
+        
+    # end
+
+
 end

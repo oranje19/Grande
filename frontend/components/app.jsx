@@ -4,9 +4,10 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import SplashFormContainer from './splash/splash_form_container';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar_form_container';
+import Test from './test/test_form';
 import {
     Route,
     Redirect,
@@ -26,6 +27,9 @@ const App = () => (
 
         <Modal />
 
+        {/* <Test /> */}
+
+        <ProtectedRoute exact path="/test" component={Test} />
 
         <Route exact path="/" component={SplashFormContainer} />
 
