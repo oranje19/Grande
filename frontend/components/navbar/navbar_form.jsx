@@ -66,7 +66,7 @@ class NavBar extends React.Component {
                 </button>
 
                 {this.state.open && (
-                    <ul ref={this.container} classNmae="dropdown-content">
+                    <ul ref={this.container} className="dropdown-content">
                         <div className="user-info-1">
                             <li className="current-user">
                                 {currentUser.username[0].toUpperCase()}

@@ -3,7 +3,7 @@ import React from 'react';
 class Splash extends React.Component {
     
     render() {
-        const { openModal } = this.props;
+        const { openModal, openModalLogin } = this.props;
 
         return (
             <ul className="splash">
@@ -18,7 +18,7 @@ class Splash extends React.Component {
                         </button>
                         <div className="splash-page-2">
                             <p>Already have an account? </p>
-                            <button className="splash-btn-2" onClick={openModal}>
+                            <button className="splash-btn-2" onClick={openModalLogin}>
                                 Sign in.
                             </button>
                         </div>

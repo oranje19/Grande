@@ -7,7 +7,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    openModal: () => dispatch(openModal("signup"))
+    openModal: () => dispatch(openModal("signup")),
+    openModalLogin: () => dispatch(openModal("login"))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash);
