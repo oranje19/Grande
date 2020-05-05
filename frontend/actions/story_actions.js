@@ -1,4 +1,4 @@
-import * as StoryApiUtil from '../util/story_util';
+import * as StoryApiUtil from '../util/story_api_util';
 
 import { receiveErrors } from './error_actions';
 
