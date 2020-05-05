@@ -1,0 +1,42 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import StoryForm from './story_form';
+import { updateStory, requestStory } from '../../actions/story_actions';
+
+class EditStoryForm extends React.Component {
+    componentDidMount() {
+        this.props.requestStory(this.props.match.params.storyId);
+    }
+
+    render() {
+        const { story, categories, updateStory, buttonText, currentUserId } = this.props;
+
+        if (!story) return null;
+
+        return (
+            <StoryForm 
+                updateStory={updateStory}
+                buttonText={buttonText}
+                story={story}
+                categories={categories}
+                currentUserId={currentUserId}
+            /> 
+        );
+    }
+}
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        currentUserId: state.session.id,
+        categories: Object.values(state.entities.categories),
+        story: state.entities.stories[ownProps.match.params.storyId],
+        buttonText: "Save nad publish"
+    };
+};
+
+const mapDispatchToProps = dispatch => ({
+    updateStory: (story) => dispatch(updateStory(story)),
+    requestStory: (storyId) => dispatch(requestStory(storyId))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditStoryForm);
