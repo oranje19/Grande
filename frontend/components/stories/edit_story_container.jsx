@@ -14,13 +14,15 @@ class EditStoryForm extends React.Component {
         if (!story) return null;
 
         return (
-            <StoryForm 
-                updateStory={updateStory}
-                buttonText={buttonText}
-                story={story}
-                categories={categories}
-                currentUserId={currentUserId}
-            /> 
+            <div className="story-form">
+                <StoryForm
+                    updateStory={updateStory}
+                    buttonText={buttonText}
+                    story={story}
+                    categories={categories}
+                    currentUserId={currentUserId}
+                />
+            </div>
         );
     }
 }
