@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import StoryForm from './story_form';
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+    return {
     currentUserId: state.session.id,
     categories: Object.values(state.entities.categories),
     story: {
@@ -9,7 +10,7 @@ const mapStateToProps = state => ({
         body: "",
         category_id: 1
     },
-    buttonText = "Publish"
-});
+    buttonText: "Publish"
+}};
 
 export default connect(mapStateToProps, null)(StoryForm);

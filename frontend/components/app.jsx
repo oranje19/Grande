@@ -15,6 +15,9 @@ import {
     Link,
     HashRouter
 } from 'react-router-dom';
+import StoryIndexContainer from './stories/story_index_container';
+import CreateStoryContainer from './stories/create_story_container';
+import EditStoryContainer from './stories/edit_story_container';
 
 const App = () => (
     <div className="grande">
@@ -30,6 +33,23 @@ const App = () => (
         {/* <Test /> */}
 
         <ProtectedRoute exact path="/test" component={Test} />
+
+        <Switch>
+            <Route 
+                exact path="/categories/:categoryId/stories"
+                component={StoryIndexContainer}
+            />
+            <ProtectedRoute 
+                exact path="/new/story"
+                component={CreateStoryContainer}
+            />
+            <ProtectedRoute 
+                exact path="stories/:storyId/edit"
+                component={EditStoryContainer}
+            />
+
+
+        </Switch>
 
         <Route exact path="/" component={SplashFormContainer} />
 

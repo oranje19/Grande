@@ -12,3 +12,16 @@ User.create({
     email: 'demouser@grande.io',
     password: 'demo12345'
 })
+
+Category.destroy_all
+category1 = Category.create({ title: 'Business' })
+category2 = Category.create({ title: 'Economy' })
+category3 = Category.create({ title: 'Leadership' })
+category4 = Category.create({ title: 'Computer Science' })
+category5 = Category.create({ title: 'Self-Improvement' })
+category6 = Category.create({ title: 'Venture Capital' })
+category7 = Category.create({ title: 'Artificial Intelligence' })
+category8 = Category.create({ title: 'Startups' })
+category9 = Category.create({ title: 'Blockchain' })
+category10 = Category.create({ title: 'Software Engineering' })
+category11= Category.create({ title: 'Space' })
