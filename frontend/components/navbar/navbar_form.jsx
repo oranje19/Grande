@@ -12,7 +12,7 @@ class NavBar extends React.Component {
         this.handleClickButton = this.handleClickButton.bind(this);
         // this.handleClickOutside = this.handleClickOutside.bind(this);
         // this.closeDropDown = this.closeDropDown.bind(this);
-        // this.logout = this.logout.bind(this);
+        this.logout = this.logout.bind(this);
 
         // this.handleDropDown = this.handleDropDown.bind(this);
 
@@ -68,12 +68,11 @@ class NavBar extends React.Component {
     // }
 
     logout() {
-        this.props.logout().then(() => this.closeDropDown());
+        this.props.logout().then(() => this.closeMenu());
     }
 
     loggedout() {
         const { openModal, currentUser } = this.props;
-        // const email = currentUser.email ? currentUser.email.split("@")[0] : null 
         return (
             <div className="session-btn">
                 <Link to="/" className="top-left-title">Grande</Link>
@@ -84,9 +83,10 @@ class NavBar extends React.Component {
             </div>
         );
     }
-
+    
     loggedin() {
         let { currentUser } = this.props;
+        // const email = currentUser.email ? currentUser.email.split("@")[0] : null 
         
         return (
             <div className="dropdown-box">
@@ -108,7 +108,7 @@ class NavBar extends React.Component {
                                 <li className="current-username">
                                     {currentUser.username.slice(0,4)}
                                 </li>
-                                {/* <li>@{email}</li> */}
+                                {/* <li>{`@${email}`}</li> */}
                             </div>
                         </div>
                         <div className="dropdown-action">
@@ -125,7 +125,7 @@ class NavBar extends React.Component {
                                 <Link>Settings</Link>
                             </li> */}
                         </div>
-                        <button className="logout-button" onClick={this.logout}>Log out</button>
+                        <button className="logout-button" onClick={this.logout}>Sign out</button>
                     </ul>
                     : null
                 }

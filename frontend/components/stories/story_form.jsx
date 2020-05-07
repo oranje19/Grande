@@ -93,6 +93,7 @@ class StoryForm extends React.Component {
                         cols="1"
                         rows="30"
                         placeholder="Tell your story..."
+                        onChange={this.update("body")}
                         value={this.state.body}
                     >
                     </textarea>
