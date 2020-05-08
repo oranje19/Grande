@@ -2,15 +2,30 @@ import React from 'react';
 
 class Splash extends React.Component {
     
+    componentDidMount() {
+        this.props.requestAllCategories();
+    }
+
     render() {
         const { openModal, openModalLogin } = this.props;
+
+        const { categories } = this.props;
+
+        const categoryList = categories.map((category) => (
+            <button key={category.id}>
+                <span className="hashtag-category"># </span>
+                <p>{category.title}</p>
+            </button>
+        ));
 
         return (
             <ul className="splash">
                 <h1>Get smarter about what matters to you.</h1>
+
                 <p className="splash-page-1">
                     Select what you're into. We'll help you find great things to read.
                 </p>
+                <div className="category-icons">{categoryList}</div>
                 <li>
                     <div>
                         <button className="splash-btn-1" onClick={openModal}>

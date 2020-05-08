@@ -22,7 +22,7 @@
     font-weight: 300;
     margin-top: 25px;
     line-height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .splash-btn-1 {
@@ -33,7 +33,7 @@
     font-size: 20px;
     padding: 8px 16px 8px 16px ;
     border: 1px solid rgb(3, 168, 124);
-    margin-top: 15px;
+    margin-top: 40px;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -59,7 +59,7 @@
 
 .splash-check-list {
     display: flex;
-    justify-content: center;
+    justify-content: space;
     margin-top: 50px;
 }
 
@@ -201,4 +201,50 @@ mark {
     margin-top: 25px;
     margin-bottom: 150px;
     cursor: pointer;
+}
+
+.category-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    min-height: 240px;
+    overflow: hidden;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-icons > button {
+    color: rgba(0, 0, 0, 0.54);
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 22px;
+    height: 42px;
+    padding: 6px 12px 6px 6px;
+    margin: 5px;
+    border-radius: 99em;
+    display: flex;
+    cursor: pointer;
+    border-color: white;
+    line-height: 32px;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-icons > button:focus {
+    background-color: #d5fce9;
+}
+
+.hashtag-category {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin-right: 8px;
+    font-size: 18px;
 }
