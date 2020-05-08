@@ -4,9 +4,21 @@ import { Link, withRouter } from 'react-router-dom';
 class StoryForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.story;
+        this.state = this.props.story
+        // {
+        //     title: "",
+        //     body: "",
+        //     category_id: 1
+        // };
 
+        this.updateSelect = this.updateSelect.bind(this)
+        this.handleCreate = this.handleCreate.bind(this)   
+        this.handleUpdate = this.handleUpdate.bind(this) 
 
+    }
+
+    componentDidMount() {
+        this.props.requestAllCategories();
     }
 
     update(field) {
@@ -23,21 +35,35 @@ class StoryForm extends React.Component {
 
     handleCreate(e) {
         e.preventDefault();
-        const formData = new FormData();
+        debugger
+        const story = Object.assign({}, this.state)
+        this.props.createStory(story)
+            .then(this.props.history.push(`/users/${this.props.currentUserId}/stories`))
+        
+        
+        
+        // console.log(this.props)
+        
+        
+        // const formData = new FormData();
 
-        formData.append("story[title]", this.state.title);
-        formData.append("story[body]", this.state.body);
-        formData.append("story[category_id]", this.state.category_id);
+        // console.log(this.state)
+        // debugger
 
-        $.ajax({
-            url: '/api/stories',
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-        }).then(() => 
-            this.props.history.push(`/users/${this.props.currentUserId}/stories`)
-        );
+        // formData.append("story[title]", this.state.title);
+        // formData.append("story[body]", this.state.body);
+        // formData.append("story[category_id]", this.state.category_id);
+
+        // $.ajax({
+        //     url: '/api/stories',
+        //     method: 'POST',
+        //     data: formData,
+        //     contentType: false,
+        //     processData: false,
+        // }).then(() => 
+        //     this.props.history.push(`/users/${this.props.currentUserId}/stories`)
+        // );
+
 
     }
 
@@ -72,6 +98,8 @@ class StoryForm extends React.Component {
         const action = buttonText === "Publish" ? this.handleCreate : this.handleUpdate;
 
         let selected = this.state.category_id.toString();
+
+        // console.log(categories);
 
         return (
             <div>

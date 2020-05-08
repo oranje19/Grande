@@ -1,9 +1,12 @@
-export const fetchAllCategories = () => (
+export const fetchAllCategories = () => {
+    // debugger
+    return (
     $.ajax({
         method: "GET",
-        url: `/api/categories`
+        url: '/api/categories'
     })
-);
+    )
+};
 
 export const fetchCategory = categoryId => (
     $.ajax({

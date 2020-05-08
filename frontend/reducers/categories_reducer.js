@@ -5,6 +5,7 @@ import {
 
 const CategoriesReducer = (state = {}, action) => {
     Object.freeze(state);
+    // debugger
     switch (action.type) {
         case RECEIVE_ALL_CATEGORIES:
             return Object.assign({}, action.categories);

@@ -18,6 +18,7 @@ import {
 import StoryIndexContainer from './stories/story_index_container';
 import CreateStoryContainer from './stories/create_story_container';
 import EditStoryContainer from './stories/edit_story_container';
+import TestContainer from './test/test_form_container'
 
 const App = () => (
     <div className="grande">
@@ -43,9 +44,16 @@ const App = () => (
                 exact path="/new/story"
                 component={CreateStoryContainer}
             />
+            <ProtectedRoute
+                exact path="/users/:currentUserId/stories"
+                component={TestContainer}
+            />
             <ProtectedRoute 
                 exact path="stories/:storyId/edit"
                 component={EditStoryContainer}
+            />
+            <ProtectedRoute
+                
             />
 
 

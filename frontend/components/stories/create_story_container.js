@@ -1,8 +1,12 @@
 import { connect } from 'react-redux';
 import StoryForm from './story_form';
+import { requestAllCategories } from '../../actions/category_actions';
+import { createStory } from '../../actions/story_actions';
 
 const mapStateToProps = state => {
-    return {
+    // console.log((state.entities))
+    // debugger
+    return ({
     currentUserId: state.session.id,
     categories: Object.values(state.entities.categories),
     story: {
@@ -11,6 +15,12 @@ const mapStateToProps = state => {
         category_id: 1
     },
     buttonText: "Publish"
-}};
+})
+};
 
-export default connect(mapStateToProps, null)(StoryForm);
+const mapDispatchToProps = dispatch => ({
+    requestAllCategories:  () => dispatch(requestAllCategories()),
+    createStory: (story) => dispatch(createStory(story))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(StoryForm);
