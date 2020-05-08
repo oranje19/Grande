@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 class Test extends React.Component {
-    constructor(props) {
-        super(props)
-        // debugger
-        // this.userId = this.props.currentUserId
-        // this.stories = Object.values(this.props.stories)
+    // constructor(props) {
+    //     super(props)
+    //     debugger
+    //     this.userId = this.props.currentUserId
+    //     this.stories = Object.values(this.props.stories)
         
-        // .filter(story => (
-        //     story.authorId === this.userId
-        // ))
-    }
+    //     .filter(story => (
+    //         story.authorId === this.userId
+    //     ))
+    // }
 
 
     render() {
@@ -22,7 +22,7 @@ class Test extends React.Component {
                 {/* Hello I'm in the test component! */}
                 {Object.values(this.props.stories).map(story => 
                     <div className="list-stories-title">
-                        <Link>{story.title}</Link>
+                        {story.title}
                     </div>
                 )}
             </div>
