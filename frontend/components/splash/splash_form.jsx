@@ -12,7 +12,7 @@ class Splash extends React.Component {
         const { categories } = this.props;
 
         const categoryList = categories.map((category) => (
-            <button key={category.id}>
+            <button className="icons-button" key={category.id}>
                 <span className="hashtag-category"># </span>
                 <p>{category.title}</p>
             </button>
@@ -22,10 +22,10 @@ class Splash extends React.Component {
             <ul className="splash">
                 <h1>Get smarter about what matters to you.</h1>
 
+                <div className="category-icons">{categoryList}</div>
                 <p className="splash-page-1">
                     Select what you're into. We'll help you find great things to read.
                 </p>
-                <div className="category-icons">{categoryList}</div>
                 <li>
                     <div>
                         <button className="splash-btn-1" onClick={openModal}>
