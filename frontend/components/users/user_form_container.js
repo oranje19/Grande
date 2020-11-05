@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Test from './test_form'
+import User from './user_form'
 
 
 const mapStateToProps = state => {
@@ -15,4 +15,4 @@ const mapStateToProps = state => {
 
 // })
 
-export default connect(mapStateToProps, null)(Test)
+export default connect(mapStateToProps, null)(User)
