@@ -1,4 +1,8 @@
 class Api::StoriesController < ApplicationController
+
+    #this is for testing only: take out of production
+    # skip_before_action :verify_authenticity_token
+
     def index
         if params[:user]
             @stories = Story.where(author_id: params[:user_id]).includes(:author, :category)

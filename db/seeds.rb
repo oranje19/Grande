@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create({
+user1 = User.create({
     username: 'demo_user',
     email: 'demouser@grande.io',
     password: 'demo12345'
@@ -42,3 +42,10 @@ category25 = Category.create({ title: 'Travel', description: 'Travel' })
 category26 = Category.create({ title: 'Finance', description: 'Finance' })
 category27 = Category.create({ title: 'Investing', description: 'Investing' })
 category28 = Category.create({ title: 'Education', description: 'Education' })
+
+Story.destroy_all
+
+story1 = Story.create({ title: 'Business 101' , body: "lorem ipsum", category_id: category1.id, author_id: user1.id})
+story2 = Story.create({ title: 'Business 102' , body: "lorem ipsum", category_id: category2.id, author_id: user1.id})
+story3 = Story.create({ title: 'Business 103' , body: "lorem ipsum", category_id: category3.id, author_id: user1.id})
+story4 = Story.create({ title: 'Business 104' , body: "lorem ipsum", category_id: category4.id, author_id: user1.id})

@@ -32,7 +32,7 @@ const mapStateToProps = (state, ownProps) => {
         currentUserId: state.session.id,
         categories: Object.values(state.entities.categories),
         story: state.entities.stories[ownProps.match.params.storyId],
-        buttonText: "Save nad publish"
+        buttonText: "Save and Publish"
     };
 };
 

@@ -22,6 +22,9 @@ class Test extends React.Component {
                 {/* Hello I'm in the test component! */}
                 {Object.values(this.props.stories).map(story => 
                     <div className="list-stories-title">
+                        <li key={story.id}>
+                            <Link to={`/stories/${story.id}`}>{story.title}</Link>
+                        </li>
                         {story.title}
                     </div>
                 )}

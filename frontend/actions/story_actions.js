@@ -22,19 +22,22 @@ const removeStory = storyId => ({
 });
 
 export const requestAllStories = () => dispatch => (
-    StoryApiUtil.fetchAllStories().then((stories) => (
+    StoryApiUtil.fetchAllStories()
+        .then((stories) => (
         dispatch(receiveStories(stories))
     ))
 );
 
 export const requestCategoryStories = categoryId => dispatch => (
-    StoryApiUtil.fetchCategoryStories(categoryId).then((stories) => (
+    StoryApiUtil.fetchCategoryStories(categoryId)
+        .then((stories) => (
         dispatch(receiveStories(stories))
     ))
 );
 
 export const requestStory = storyId => dispatch => (
-    StoryApiUtil.fetchStory(storyId).then((story) => (
+    StoryApiUtil.fetchStory(storyId)
+        .then((story) => (
         dispatch(receiveStory(story))
     ))
 );
