@@ -19,6 +19,7 @@ import StoryIndexContainer from './stories/story_index_container';
 import CreateStoryContainer from './stories/create_story_container';
 import EditStoryContainer from './stories/edit_story_container';
 import UserStoriesContainer from './users/user_stories_container'
+import StoryDetailContainer from './stories/story_detail_container';
 
 const App = () => (
     <div className="grande">
@@ -47,6 +48,11 @@ const App = () => (
             <ProtectedRoute
                 exact path="/users/:userId/stories"
                 component={UserStoriesContainer}
+            />
+
+            <Route 
+                exact path="/stories/:storyId"
+                component={StoryDetailContainer}
             />
 
             <ProtectedRoute 

@@ -27,8 +27,8 @@ class UserStoriesList extends React.Component {
                 <Link to={`/stories/${story[0]}`}>{story[1].title}</Link>
                 {/* <Link to={`/stories/${story.id}`}>{story.title}</Link> */}
                 <div className="user-story-btn">
-                    <Link to={`/storirs/${story.id}/edit`}>Edit Story</Link>
-                    <button onClick={() => this.handleDelete(story.id)}>
+                    <Link to={`/stories/${story[1].id}/edit`}>Edit Story</Link>
+                    <button onClick={() => this.handleDelete(story[1].id)}>
                         Delete Story
                     </button>
                 </div>
