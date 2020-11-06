@@ -44,7 +44,6 @@ category27 = Category.create({ title: 'Investing', description: 'Investing' })
 category28 = Category.create({ title: 'Education', description: 'Education' })
 
 Story.destroy_all
-
 story1 = Story.create({ title: 'Business 101' , body: "lorem ipsum", category_id: category1.id, author_id: user1.id})
 story2 = Story.create({ title: 'Business 102' , body: "lorem ipsum", category_id: category2.id, author_id: user1.id})
 story3 = Story.create({ title: 'Business 103' , body: "lorem ipsum", category_id: category3.id, author_id: user1.id})

@@ -12,7 +12,7 @@ const mapStateToProps = state => {
     story: {
         title: "",
         body: "",
-        category_id: 1
+        category_id: ""
     },
     buttonText: "Publish"
 })

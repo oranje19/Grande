@@ -5,6 +5,12 @@ import { receiveErrors } from './error_actions';
 export const RECEIVE_STORIES = "RECEIVE_STORIES";
 export const RECEIVE_STORY = "RECEIVE_STORY";
 export const REMOVE_STORY = "REMOVE_STORY";
+export const RECIEVE_USER_STORIES = "RECIEVE_USER_STORIES";
+
+const receiveUserStories = stories => ({
+    type: RECIEVE_USER_STORIES,
+    stories
+})
 
 const receiveStories = stories => ({
     type: RECEIVE_STORIES,
@@ -20,6 +26,13 @@ const removeStory = storyId => ({
     type: REMOVE_STORY,
     storyId
 });
+
+export const requestUserStories = (userId) => dispatch => (
+    StoryApiUtil.fetchUserStories(userId)
+        .then((stories) => (
+            dispatch(receiveUserStories(stories))
+        ))
+);{}
 
 export const requestAllStories = () => dispatch => (
     StoryApiUtil.fetchAllStories()

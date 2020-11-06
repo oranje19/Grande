@@ -35,7 +35,7 @@ class StoryForm extends React.Component {
 
     handleCreate(e) {
         e.preventDefault();
-        debugger
+        // debugger
         const story = Object.assign({}, this.state)
         this.props.createStory(story)
             .then(this.props.history.push(`/users/${this.props.currentUserId}/stories`))
@@ -88,7 +88,9 @@ class StoryForm extends React.Component {
                     Back to stories  
                 </Link>
             ) : null;
-
+        
+        // console.log("THIS IS THE CATEGORIES")
+        // console.log(categories)
         const categoryList = categories.map((category) => (
             <option key={category.id} value={`${category.id}`}>
                 {category.title}
@@ -97,7 +99,7 @@ class StoryForm extends React.Component {
 
         const action = buttonText === "Publish" ? this.handleCreate : this.handleUpdate;
 
-        let selected = this.state.category_id.toString();
+        // let selected = this.state.category_id.toString();
 
         // console.log(categories);
 
@@ -129,7 +131,7 @@ class StoryForm extends React.Component {
                     <label className="select-category">Select category</label>
                     <select 
                         className="select-category-list"
-                        value={selected}
+                        value={this.state.category_id}
                         onChange={this.updateSelect()}
                     >{categoryList}
                     </select>

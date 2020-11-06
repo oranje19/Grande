@@ -7,7 +7,7 @@ import SplashFormContainer from './splash/splash_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import NavBar from './navbar/navbar_form_container';
-import User from './users/user_form';
+import User from './users/user_stories';
 import {
     Route,
     Redirect,
@@ -18,7 +18,7 @@ import {
 import StoryIndexContainer from './stories/story_index_container';
 import CreateStoryContainer from './stories/create_story_container';
 import EditStoryContainer from './stories/edit_story_container';
-import UserContainer from './users/user_form_container'
+import UserStoriesContainer from './users/user_stories_container'
 
 const App = () => (
     <div className="grande">
@@ -45,9 +45,10 @@ const App = () => (
                 component={CreateStoryContainer}
             />
             <ProtectedRoute
-                exact path="/users/:currentUserId/stories"
-                component={UserContainer}
+                exact path="/users/:userId/stories"
+                component={UserStoriesContainer}
             />
+
             <ProtectedRoute 
                 exact path="stories/:storyId/edit"
                 component={EditStoryContainer}
@@ -56,7 +57,7 @@ const App = () => (
                 
             /> */}
 
-
+            
         </Switch>
 
         <Route exact path="/" component={SplashFormContainer} />

@@ -19,3 +19,11 @@ export const deleteUser = userId => (
         url: `/api/users/${userId}`
     })
 );
+
+export const signup = (user) => (
+    $.ajax({
+        method: "POST",
+        url: "/api/users",
+        data: { user }
+    })
+);
