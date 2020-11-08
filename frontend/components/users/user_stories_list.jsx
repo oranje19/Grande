@@ -32,7 +32,7 @@ class UserStoriesList extends React.Component {
                         Delete Story
                     </button>
                 </div>
-            </li>
+            </li>                                                                               
         ));
 
         return (

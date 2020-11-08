@@ -22,7 +22,33 @@ class User < ApplicationRecord
 
     has_many :stories,
         foreign_key: :author_id,
-        class_name: :Story
+        class_name: :Story,
+        dependent: :destroy
+
+    has_many :comments,
+        foreign_key: :author_id,
+        class_name: :Comment,
+        inverse_of: :author
+
+    has_many :a_follows_b,
+        foreign_key: :follower_id,
+        class_name: :Follow,
+        dependent: :destroy
+
+    has_many :b_followed_by_a,
+        foreign_key: :followed_id,
+        class_name: :Follow,
+        dependent: :destroy
+
+    #a follows many people
+    has_many :following,
+        through: :a_follows_b,
+        source: :followed
+
+    #b has many followers
+    has_many :followers,
+        through: :b_followerd_by_a,
+        source: :follower
 
 
     def self.find_by_credentials(username, password)
