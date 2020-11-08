@@ -32,7 +32,7 @@ export const requestUserStories = (userId) => dispatch => (
         .then((stories) => (
             dispatch(receiveUserStories(stories))
         ))
-);{}
+);
 
 export const requestAllStories = () => dispatch => (
     StoryApiUtil.fetchAllStories()

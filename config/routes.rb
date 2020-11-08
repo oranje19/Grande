@@ -10,6 +10,14 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :show] do
       resources :stories, only: [:index]
     end
+
+
+    post '/users/:id/follow', to: "users#follow", as: "follow_user"
+    post '/users/:id/unfollow', to: "user#unfollow", as: "unfollow_user"
+  
+  
+    resources :comments, :only: [:show, :create, :update, :destroy]
+
   end
 
   root "static_pages#root"
