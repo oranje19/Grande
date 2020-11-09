@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     post '/users/:id/unfollow', to: "user#unfollow", as: "unfollow_user"
   
   
-    resources :comments, :only: [:show, :create, :update, :destroy]
+    resources :comments, only: [:show, :create, :update, :destroy]
 
   end
 

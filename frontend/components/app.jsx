@@ -6,7 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import SplashFormContainer from './splash/splash_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
-import NavBar from './navbar/navbar_form_container';
+import NavBarContainer from './navbar/navbar_form_container';
 import User from './users/user_stories';
 import {
     Route,
@@ -22,15 +22,23 @@ import UserStoriesContainer from './users/user_stories_container'
 import StoryDetailContainer from './stories/story_detail_container';
 
 const App = () => (
-    <div className="grande">
-        <NavBar />
+    <div className="body">
+        <Modal />
 
+        <div className="navbar">
+            <div id="grande">
+                <Link to="/">Grande</Link>
+            </div>
+            <div >
+            <NavBarContainer />
+            </div>
+        </div>
+        
         <header>
             {/* <h1 className="top-left-title">Grande</h1> */}
-            <GreetingContainer />
+            {/* <GreetingContainer /> */}
         </header>
 
-        <Modal />
 
         {/* <Test /> */}
 

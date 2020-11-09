@@ -25,6 +25,15 @@
 //     color: orange;
 // }
 
+.body {
+    max-width: 1192px!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .top-left-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 32px;

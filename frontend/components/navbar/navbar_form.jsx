@@ -5,62 +5,67 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { open: false };
-        // this.container = React.createRef();
-
-
+        this.state = { 
+            open: false 
+        };
+        this.container = React.createRef();
+        
+        
         this.handleClickButton = this.handleClickButton.bind(this);
-        // this.handleClickOutside = this.handleClickOutside.bind(this);
-        // this.closeDropDown = this.closeDropDown.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+        this.closeDropDown = this.closeDropDown.bind(this);
         this.logout = this.logout.bind(this);
-
+        
         // this.handleDropDown = this.handleDropDown.bind(this);
-
-        this.showMenu = this.showMenu.bind(this);
-        this.closeMenu = this.closeMenu.bind(this);
-
+        
+        // this.showMenu = this.showMenu.bind(this);
+        // this.closeMenu = this.closeMenu.bind(this);
+        
     }
 
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+    
+    componentWillMount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    
     handleClickButton() {
         this.setState({ open: !this.state.open })
         // this.props.history.push("/new/story")
     }
 
-    // handleClickOutside(e) {
-    //     if (this.container.current && !this.container.current.contains(e.currentTarget)) {
-    //         this.setState({
-    //             open: false
-    //         })
-    //     }
-    // }
-
-    showMenu(e) {
-        e.preventDefault();
-        this.setState({ open: true }, () => {
-            document.addEventListener('click', this.closeMenu)
-        })
-    }
-
-    closeMenu(e) {
-        if (!this.open.contains(e.target))
+    handleClickOutside(e) {
+        if (this.container.current && !this.container.current.contains(e.target)) {
             this.setState({
                 open: false
-            }, () => {
-                document.removeEventListener('click', this.closeMenu)
             })
+        }
     }
 
-    // componentWillMount() {
-    //     document.removeEventListener('mousedown', this.handleClickOutside);
+    // showMenu(e) {
+    //     e.preventDefault();
+    //     this.setState({ open: true }, () => {
+    //         document.addEventListener('click', this.closeMenu)
+    //     })
     // }
 
-    // componentDidMount() {
-    //     document.addEventListener('mousedown', this.handleClickOutside);
+    // closeMenu(e) {
+    //     if (!this.open.contains(e.target))
+    //         this.setState({
+    //             open: false
+    //         }, () => {
+    //             document.removeEventListener('click', this.closeMenu)
+    //         })
     // }
 
-    // closeDropDown() {
-    //     this.setState({ open: false }, () => console.log("hello"));
-    // }
+
+    closeDropDown() {
+        // this.setState({ open: false }, () => console.log("hello"));
+        this.setState({ open: false });
+    }
 
     // handleDropDown() {
     //     this.closeDropDown().then(console.log("hello"));
@@ -68,37 +73,35 @@ class NavBar extends React.Component {
     // }
 
     logout() {
-        this.props.logout().then(() => this.closeMenu());
+        this.props.logout().then(() => this.closeDropDown());
     }
 
     loggedout() {
         const { openModal, currentUser } = this.props;
         return (
-            <div className="session-btn">
-                <Link to="/" className="top-left-title">Grande</Link>
-                <div className="session-btn-2">
+            <div className="session-btn-2">
+                {/* <Link to="/" className="top-left-title">Grande</Link> */}
+                {/* <div className="session-btn-2"> */}
                     <button id="login-btn" onClick={() => openModal("login")}>Sign in</button>
                     <button id="signup-btn" onClick={() => openModal("signup")}>Get started</button>
-                </div>
+                {/* </div> */}
             </div>
         );
     }
     
     loggedin() {
         let { currentUser } = this.props;
-        // const email = currentUser.email ? currentUser.email.split("@")[0] : null 
+        const email = currentUser.email ? currentUser.email.split("@")[0] : null 
         
         return (
             <div className="dropdown-box">
-                <Link to="/" className="top-left-title">Grande</Link>
+                {/* <Link to="/" className="top-left-title">Grande</Link> */}
                 <button className="current-user-name" onClick={this.handleClickButton}>
                     {currentUser.username[0].toUpperCase()}
                 </button>
 
-                
-
                 {/* {this.state.open && ( */}
-                {this.state.open ? 
+                {/* this.state.open ? 
                     <ul ref={(ele) => this.container = ele} className="dropdown-content">
                         <div className="user-info-1">
                             <li className="current-user">
@@ -108,7 +111,7 @@ class NavBar extends React.Component {
                                 <li className="current-username">
                                     {currentUser.username.slice(0,4)}
                                 </li>
-                                {/* <li>{`@${email}`}</li> */}
+                               
                             </div>
                         </div>
                         <div className="dropdown-action">
@@ -118,17 +121,41 @@ class NavBar extends React.Component {
                             <li className="dropdown-list" onClick={this.closeMenu}>
                                 <Link to={`/users/${currentUser.id}/stories`}>Stories</Link>
                             </li>
-                            {/* <li className="dropdown-list" onClick={this.closeDropDown}>
-                                <Link>Profile</Link>
-                            </li>
-                            <li className="dropdown-list" onClick={this.closeDropDown}>
-                                <Link>Settings</Link>
-                            </li> */}
+                        
                         </div>
                         <button className="logout-button" onClick={this.logout}>Sign out</button>
                     </ul>
                     : null
-                }
+                 */}
+
+                {this.state.open && (
+                    <ul ref={this.container} className="dropdown-content">
+                        <div className="user-info-1">
+                            <li className="current-user">
+                                {currentUser.username[0].toUpperCase()}
+                            </li>
+                            <div className="user-info-2">
+                                <li className="current-username">
+                                    {currentUser.username.slice(0,4)}
+                                </li>
+                                <li>
+                                    {`@${email}`}
+                                </li>
+                            </div>
+                        </div>
+                        <div className="dropdown-action">
+                            <li className="dropdown-list" onClick={this.closeDropDown}>
+                                <Link to="/new/story">New story</Link>
+                            </li>
+                            <li className="dropdown-list" onClick={this.closeDropDown}>
+                                <Link to={`/users/${currentUser.id}/stories`}>Stories</Link>
+                            </li>
+                        </div>
+                        <button className="logout-button" onClick={this.logout}>
+                            Sign out
+                        </button>
+                    </ul>
+                )}
 
             </div>
         )
