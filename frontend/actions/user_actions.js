@@ -39,3 +39,13 @@ export const deleteUser = (userId) => (dispatch) =>
     UserApiUtil.deleteUser(userId).then(
         () => dispatch(removeUser(userId))
     );
+
+export const follow = (userId) => (dispatch) =>
+    UserApiUtil.follow(userId).then(
+        (user) => dispatch(receiveCurrentUser(user))
+    );
+
+export const unfollow =(userId) => (dispatch) =>
+    UserApiUtil.unfollow(userId).then(
+        (user) => dispatch(receiveCurrentUser(user))
+    );

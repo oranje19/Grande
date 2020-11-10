@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { createComment } from "../../actions/comment_actions";
+import CreateParentComment from "./create_parent_comment";
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,4 +17,4 @@ const mapDispatchToProps = (dispatch) => ({
     createComment: (comment) => dispatch(createComment(comment))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateParentComment);

@@ -5,16 +5,49 @@ import dateUtil from "../../util/date_util";
 class StoryDetail extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            followed: false
+        };
+
+
     }
 
     componentDidMount() {
         this.props.requestStory(this.props.match.params.storyId)
-        .then(() => this.props.fetchUser(this.props.currentUserId))
+            .then(() => this.props.fetchUser(this.props.currentUserId))
     }
 
+    handleFollow() {
+        this.props.follow(this.props.story.author_id)
+            .then(
+                () => this.setState( { followed: !this.state.followed })
+            )
+    }
+
+    handleUnfollow() {
+        this.props.unfollow(this.props.story.author_id)
+            .then(
+                () => this.setState({ followed: !this.state.followed })
+            )
+    }
 
     render() {
         const { user, story } = this.props;
+
+        if (!story || !user.followings) return null;
+        let followed = false;
+
+        user.followings.forEach((following) => {
+            if (following.username == story.author) {
+                followed = true;
+            }
+        })
+
+        const comment_authors = story.comment_authors;
+
+        // const showComments = story.all_comments
+        //     ? Object.keys(story.all_comments).length !== 0
+        //         ? story
 
         return (
             <div className="story-content">

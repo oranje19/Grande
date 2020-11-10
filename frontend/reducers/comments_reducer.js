@@ -10,4 +10,4 @@ const commentsReducer = (state = {}, action) => {
     }
 };
 
-export default commentsReducer;d
+export default commentsReducer;

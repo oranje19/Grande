@@ -27,3 +27,19 @@ export const signup = (user) => (
         data: { user }
     })
 );
+
+export const follow = (userId) => (
+    $.ajax({
+        method: "POST",
+        url: `/api/users/${userId}/follow`,
+        data: {userId}
+    })
+);
+
+export const unfollow = (userId) => (
+    $.ajax({
+        method: "POST",
+        url: `/api/users/${userId}/unfollow`,
+        data: {userId}
+    })
+);

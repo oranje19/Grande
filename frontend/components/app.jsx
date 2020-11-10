@@ -20,6 +20,7 @@ import CreateStoryContainer from './stories/create_story_container';
 import EditStoryContainer from './stories/edit_story_container';
 import UserStoriesContainer from './users/user_stories_container'
 import StoryDetailContainer from './stories/story_detail_container';
+import CategoriesBarContainer from './categories/category_container';
 
 const App = () => (
     <div className="body">
@@ -27,7 +28,7 @@ const App = () => (
 
         <div className="navbar">
             <div id="grande">
-                <Link to="/">Grande</Link>
+                <Link to="/home">Grande</Link>
             </div>
             <div >
             <NavBarContainer />
@@ -39,6 +40,7 @@ const App = () => (
             {/* <GreetingContainer /> */}
         </header>
 
+        <ProtectedRoute path="/home" component={CategoriesBarContainer} />
 
         {/* <Test /> */}
 
