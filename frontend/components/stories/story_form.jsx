@@ -4,16 +4,17 @@ import { Link, withRouter } from 'react-router-dom';
 class StoryForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.story
+        this.state = this.props.story;
         // {
         //     title: "",
         //     body: "",
         //     category_id: 1
         // };
 
-        this.updateSelect = this.updateSelect.bind(this)
-        this.handleCreate = this.handleCreate.bind(this)   
-        this.handleUpdate = this.handleUpdate.bind(this) 
+        this.updateSelect = this.updateSelect.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);  
+        this.handleUpdate = this.handleUpdate.bind(this);
+        this.update = this.update.bind(this);
 
     }
 
@@ -36,6 +37,7 @@ class StoryForm extends React.Component {
     handleCreate(e) {
         e.preventDefault();
         // debugger
+
         const story = Object.assign({}, this.state)
         this.props.createStory(story)
             .then(this.props.history.push(`/users/${this.props.currentUserId}/stories`))
@@ -53,6 +55,15 @@ class StoryForm extends React.Component {
         // formData.append("story[title]", this.state.title);
         // formData.append("story[body]", this.state.body);
         // formData.append("story[category_id]", this.state.category_id);
+
+        // this.props
+        //     .createStory(formData)
+        //         .then(
+        //             () => this.props.clearErrors()
+        //         )
+        //         .then(
+        //             () => this.props.history.push(`/users/${this.props.currentUserId}/stories`)
+        //         )
 
         // $.ajax({
         //     url: '/api/stories',
@@ -99,7 +110,7 @@ class StoryForm extends React.Component {
 
         const action = buttonText === "Publish" ? this.handleCreate : this.handleUpdate;
 
-        // let selected = this.state.category_id.toString();
+        let selected = this.state.category_id.toString();
 
         // console.log(categories);
 

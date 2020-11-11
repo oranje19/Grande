@@ -29,9 +29,11 @@
     border: 1px solid rgb(3, 168, 124);
     border-radius: 3px;
     margin: 0 20px 0 20px;
-    font-size: 13px;
+    font-size: 14px;
     align-self: center;
     cursor: pointer;
+    margin-bottom: -150px;
+    margin-top: 75px;
 }
 
 .story-form-title {
@@ -43,14 +45,26 @@
 .story-form-body {
     font-size: 24px;
     resize: none;
+    // padding: 100px;
+    // padding: 0px;
+    // color: white;
+    border: 1px solid white;;
 }
 
-// .select-category {
-//     position: relative;
-//     top: -500px;
-//     left: -150px;
-//     font-size: 19px;
-//     font-weight: 600;
-//     color: rgba(0, 0, 0, 0.6);
-// }
+.select-category {
+    position: relative;
+    top: -700px;
+    left: -150px;
+    font-size: 19px;
+    // font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    width: 20%;
+}
+
+.select-category-list {
+    position: relative;
+    top: -680px;
+    left: -150px;
+    width: 20%;
+}
 

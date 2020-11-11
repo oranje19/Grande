@@ -32,7 +32,7 @@ class UserStories extends React.Component {
 
         return (
             <div className="user-stories">
-                <div>
+                <div className="my-stories-top">
                     <h1>Your Stories</h1>
                     <Link className="new-story-btn" to="/new/story">
                         Write a story

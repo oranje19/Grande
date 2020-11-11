@@ -23,7 +23,7 @@ class UserStoriesList extends React.Component {
         // let b = Object.entries(stories)
         // console.log(b)
         const userStoryList = Object.entries(stories).map((story) => (
-            <li key={story.id}>
+            <li key={story[0]}>
                 <Link to={`/stories/${story[0]}`}>{story[1].title}</Link>
                 {/* <Link to={`/stories/${story.id}`}>{story.title}</Link> */}
                 <div className="user-story-btn">
