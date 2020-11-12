@@ -27,8 +27,8 @@ class User < ApplicationRecord
 
     has_many :comments,
         foreign_key: :author_id,
-        class_name: :Comment,
-        inverse_of: :author
+        class_name: :Comment
+        # inverse_of: :author
 
     has_many :a_follows_b,
         foreign_key: :follower_id,

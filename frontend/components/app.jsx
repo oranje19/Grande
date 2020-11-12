@@ -60,7 +60,7 @@ const App = () => (
                 component={UserStoriesContainer}
             />
 
-            <Route 
+            <ProtectedRoute 
                 exact path="/stories/:storyId"
                 component={StoryDetailContainer}
             />

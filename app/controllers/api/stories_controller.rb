@@ -17,6 +17,7 @@ class Api::StoriesController < ApplicationController
 
     def show
         @story = Story.includes(:author, :category).find(params[:id])
+        # @comments = Comment.where(story_id: @story.id )
         render :show
     end
 

@@ -20,9 +20,34 @@ class Story < ApplicationRecord
 
     belongs_to :category
 
+    has_many :comments 
+    # inverse_of: :stories
+
     # def comment_by_authors
         
     # end
 
+
+    def comments_by_parent
+        comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
+
+        parentStories = self.comments.includes(:parent_comment)
+        # puts parentStories
+        # byebug
+        parentStories.each do |comment|
+            comments_by_parent[comment.parent_comment_id] << comment
+        end
+
+        comments_by_parent
+    end
+
+    def comment_authors
+        comment_authors =  Hash.new 
+
+        self.comments.includes(:author).each do |comment|
+            comment_authors[comment.author.id] = comment.author.username
+        end
+        comment_authors
+    end
 
 end

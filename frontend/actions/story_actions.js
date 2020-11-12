@@ -72,7 +72,8 @@ export const updateStory = story => dispatch => (
 );
 
 export const deleteStory = storyId => dispatch => (
-    StoryApiUtil.deleteStory(storyId).then(() => (
+    StoryApiUtil.deleteStory(storyId).then(
+        () => (
         dispatch(removeStory(storyId))
     ), (errors) => (
         dispatch(receiveErrors(errors.responseJSON))

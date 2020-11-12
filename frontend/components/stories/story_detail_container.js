@@ -7,7 +7,8 @@ import StoryDetail from "./story_detail";
 const mapStateToProps = (state, ownProps) => ({
     story: state.entities.stories[ownProps.match.params.storyId],
     user: state.entities.users[state.session.id],
-    currentUserId: state.session.id
+    currentUserId: state.session.id,
+    storyId: parseInt(ownProps.match.params.storyId)
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -9,7 +9,7 @@ class CategoriesBar extends React.Component {
     render() {
         const { categories } = this.props;
         const categoryList = categories.map((category) => (
-            <li key={category.id}>
+            <li className="category-item" key={category.id} >
                 <Link to={`/categories/${category.id}/stories`}>{category.title}</Link>
             </li>
         ));

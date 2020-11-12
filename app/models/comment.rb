@@ -13,13 +13,13 @@ class Comment < ApplicationRecord
 
     after_initialize :ensure_story_id!
 
-    belongs_to :story,
-        inverse_of: :comments
+    belongs_to :story 
+    # inverse_of: :comments
 
     belongs_to :author,
         foreign_key: :author_id,
-        class_name: :User,
-        inverse_of: :comments
+        class_name: :User
+        # inverse_of: :comments
 
     has_many :child_comments,
         foreign_key: :parent_comment_id,
@@ -29,7 +29,7 @@ class Comment < ApplicationRecord
     belongs_to :parent_comment,
         foreign_key: :parent_comment_id,
         class_name: :Comment,
-        primary_key: :id
+        primary_key: :id,
         optional: true
 
     private

@@ -5,7 +5,7 @@ import { updateStory, requestStory } from '../../actions/story_actions';
 
 class EditStoryForm extends React.Component {
     componentDidMount() {
-        this.props.requestStory(this.props.match.params.storyId);
+        this.props.requestStory(this.props.storyId);
     }
 
     render() {
@@ -32,7 +32,8 @@ const mapStateToProps = (state, ownProps) => {
         currentUserId: state.session.id,
         categories: Object.values(state.entities.categories),
         story: state.entities.stories[ownProps.match.params.storyId],
-        buttonText: "Save and Publish"
+        buttonText: "Save and Publish",
+        storyId: parseInt(ownProps.match.params.storyId)
     };
 };
 

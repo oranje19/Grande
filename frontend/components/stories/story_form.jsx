@@ -144,7 +144,9 @@ class StoryForm extends React.Component {
                         className="select-category-list"
                         value={this.state.category_id}
                         onChange={this.updateSelect()}
-                    >{categoryList}
+                    >
+                        <option value="" selected disabled hidden>Choose here</option>
+                        {categoryList}
                     </select>
                 </form>
             </div>

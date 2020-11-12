@@ -15,8 +15,8 @@ const storiesReducer = (state = {}, action) => {
         case RECIEVE_USER_STORIES:
             return action.stories
         case REMOVE_STORY:
-            const newState = Object.assign({}, state);
-            delete newState[action.story.id];
+            let newState = Object.assign({}, state);
+            delete newState[action.storyId];
             return newState;
         default:
             return state;

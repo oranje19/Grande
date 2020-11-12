@@ -16,8 +16,9 @@ class StoryDetail extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestStory(this.props.match.params.storyId)
-            .then(() => this.props.fetchUser(this.props.currentUserId))
+        // debugger
+        this.props.requestStory(this.props.storyId)
+            // .then(() => this.props.fetchUser(this.props.currentUserId))
     }
 
     handleFollow() {
@@ -36,6 +37,7 @@ class StoryDetail extends React.Component {
 
     render() {
         const { user, story } = this.props;
+        console.log(story)
 
         if (!story || !user.followings) return null;
         let followed = false;
@@ -70,9 +72,14 @@ class StoryDetail extends React.Component {
 
         // const followButton
         // const followAction
+        
+        if (story.author_id === undefined) {
+            return null
+        } else {
 
-        return (
-            <div>
+            
+            return (
+                <div>
                 <div className="story-content">
                     <ul className="story-detail">
                         <li className="story-title">{story.title}</li>
@@ -101,7 +108,8 @@ class StoryDetail extends React.Component {
             </div>
         )
     }
-
+    }
+    
 }
 
 export default StoryDetail;
