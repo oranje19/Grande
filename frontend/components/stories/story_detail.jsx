@@ -38,15 +38,17 @@ class StoryDetail extends React.Component {
     render() {
         const { user, story } = this.props;
         console.log(story)
+        console.log(user)
 
-        if (!story || !user.followings) return null;
+        // if (!story || !user.followings) return null;
+        if (!story) return null;
         let followed = false;
 
-        user.followings.forEach((following) => {
-            if (following.username == story.author) {
-                followed = true;
-            }
-        })
+        // user.followings.forEach((following) => {
+        //     if (following.username == story.author) {
+        //         followed = true;
+        //     }
+        // })
 
         const comment_authors = story.comment_authors;
 
@@ -89,7 +91,7 @@ class StoryDetail extends React.Component {
                             <div>
                                 <div className="story-author-info-1">
                                     <div>
-                                        <Link to="">{story.author}</Link>
+                                            <Link to={`/users/${user.id}/stories`}>{story.author}</Link>
                                     </div>
                                 </div>
                                 <div className="story-author-info-2">
