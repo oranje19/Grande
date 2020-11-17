@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dateUtil from '../../util/date_util';
 
 class StoryIndex extends React.Component {
     componentDidMount() {
@@ -14,6 +15,8 @@ class StoryIndex extends React.Component {
 
     render() {
         const { category, stories } = this.props;
+        // console.log(category)
+        // console.log("ABOVE IS CATEGORY")
 
         if (!this.props.category) return null;
 
@@ -25,6 +28,17 @@ class StoryIndex extends React.Component {
                             <Link to={`/stories/${story.id}`}>{story.title}</Link>
                         </li>
                         <li>{story.author}</li>
+                        <ul className="story-bottom">
+                            <li>
+                                {dateUtil(story.updated_at)}
+                            </li>
+                            <li>
+                                <i className="fas fa-circle"></i>
+                            </li>
+                            <li>
+                                {`${Math.floor(Math.random() * 10 + 2)} min read`}
+                            </li>
+                        </ul>
                     </ul>
                 </li>
             )
@@ -34,7 +48,7 @@ class StoryIndex extends React.Component {
             <div className='stories'>
                 <div className="stories-top">
                     <h1>{category.title}</h1>
-                    <p>{category.description}</p>
+                    {/* <p>{category.description}</p> */}
                     <div className="category-follow">
                         <button className="follow-category-button">Follow</button>
                         <p>19k followers</p>

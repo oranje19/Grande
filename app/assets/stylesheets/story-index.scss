@@ -1,0 +1,140 @@
+.stories {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 90%;
+}
+
+.stories-top {
+    min-height: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.story-top > h1 {
+    font-size: 70px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.story-top > p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.category-stories > li:first-child .story-info {
+    background-color: orange;
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-stories > li:nth-child(-n + 2) {
+    height: 355px;
+    padding-top: 50px;
+    display: flex;
+}
+
+.category-stories > li:nth-child(-n + 2) .story-info > li {
+    padding: 10px;
+}
+
+.category-stories > li:nth-child(-n + 2) .story-info .story-bottom {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.category-stories > li:nth-child(-n + 2) .story-info-title {
+    width: 80%;
+    text-align: center;
+}
+
+.category-stories > li:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+
+.category-stories > li:nth-child(2) .story-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.category-stories > li:nth-child(n + 2) .story-info li:nth-child(3) {
+  color: #6A0BFF;
+}
+
+.category-stories > li:nth-child(n + 3) {
+  height: 180px;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.category-stories > li:nth-child(n + 3) .story-img {
+  width: 40%;
+  height: auto;
+}
+
+.category-stories > li:nth-child(n + 3) .story-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.category-stories > li:nth-child(n + 3) .story-info > li {
+  padding-bottom: 10px;
+}
+
+.category-follow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.category-follow > p {
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 20px;
+}
+
+.follow-category-button {
+  border: 1px solid (orange);
+  border-radius: 5px;
+  color: orange;
+  padding: 8px 16px 8px 16px;
+}
+
+
+.story-info > li:nth-child(1) {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.category-stories > li:nth-child(n + 3) .story-info .story-bottom {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+//todo add a star icon
+.category-stories > li:nth-child(n + 3) .story-info .story-bottom li {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+
+
+.stories .fas{
+  font-size: 5px;
+}

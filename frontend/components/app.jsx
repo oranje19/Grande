@@ -21,6 +21,8 @@ import EditStoryContainer from './stories/edit_story_container';
 import UserStoriesContainer from './users/user_stories_container'
 import StoryDetailContainer from './stories/story_detail_container';
 import CategoriesBarContainer from './categories/category_container';
+import CreateParentCommentContainer from './comments/create_parent_comment_container';
+import CreateChildCommentContainer from './comments/create_child_comments_container';
 
 const App = () => (
     <div className="body">
@@ -66,13 +68,22 @@ const App = () => (
             />
 
             <ProtectedRoute 
-                exact path="stories/:storyId/edit"
+                exact path="/stories/:storyId/edit"
                 component={EditStoryContainer}
             />
             {/* <ProtectedRoute
                 
             /> */}
+            
+            <ProtectedRoute 
+                exact path="/stories/:storyId/newcomment"
+                component={CreateParentCommentContainer}
+            />
 
+            <ProtectedRoute 
+                exact path="/comments/:commentId/new"
+                component={CreateChildCommentContainer}
+            />
             
         </Switch>
 

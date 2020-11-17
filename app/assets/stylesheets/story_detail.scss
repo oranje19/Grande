@@ -1,0 +1,85 @@
+.story-content {
+    width: 60%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.story-detail {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-title {
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.story-category {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.312);
+    font-weight: lighter;
+    padding-top: 20px;
+}
+
+.story-author-info {
+    display: flex;
+    height: 50px;
+    margin: 20px 0px 20px 0px;
+}
+
+.story-author-info > div:first-child {
+    border-radius: 200px 200px 200px 200px;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: rgba(3, 168, 124, 1);
+    line-height: 50px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.story-author-info > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.story-author-info-1 {
+    display: flex;
+    font-size: 15px;
+}
+
+.story-author-info-2 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    align-items: center;
+}
+
+.story-body {
+    margin-top: 45px;
+}
+
+.story-body > p {
+    border-radius: 200px 200px 200px 200px;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 50px;
+    float: left;
+    margin: 10px;
+    color: white;
+}
+
+.story-body > div {
+    font-size: 20px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.75);
+}
