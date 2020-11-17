@@ -1,7 +1,7 @@
 <img width="1313" alt="Screen Shot 2020-05-08 at 9 58 55 AM" src="https://user-images.githubusercontent.com/43044641/81460023-8b17da80-9157-11ea-9eff-634b002b5531.png">
 
 # Grande
-Grande, a Medium clone, is an online publishing platform that taps into the brains of the world's most insightful writers, thinkers, and storytellers to bring you the smartest takes on topics that matter. The application will allow users to publish their own stories that can be viewed and clapped by other users.
+Grande, a Medium clone, is an online publishing platform that taps into the brains of the world's most insightful writers, thinkers, and storytellers to bring you the smartest takes on topics that matter. The application will allow users to publish their own stories that can be viewed and commented by other users.
 
 Click [here](http://grandestar.herokuapp.com/) to see the live site.
 
