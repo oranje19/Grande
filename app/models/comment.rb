@@ -13,7 +13,9 @@ class Comment < ApplicationRecord
 
     after_initialize :ensure_story_id!
 
-    belongs_to :story 
+    belongs_to :story ,
+        foreign_key: :story_id,
+        class_name: :Story
     # inverse_of: :comments
 
     belongs_to :author,

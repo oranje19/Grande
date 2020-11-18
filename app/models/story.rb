@@ -20,7 +20,9 @@ class Story < ApplicationRecord
 
     belongs_to :category
 
-    has_many :comments 
+    has_many :comments,
+        foreign_key: :story_id,
+        class_name: :Comment 
     # inverse_of: :stories
 
     # def comment_by_authors
