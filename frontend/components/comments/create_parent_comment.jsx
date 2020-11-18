@@ -3,7 +3,7 @@ import React from "react";
 class CreateParentComment extends React.Component {
     constructor(props) {
         super(props)
-        this.state = this.props.comment
+        this.state = this.props.comment;
 
         this.handleSubmitComment = this.handleSubmitComment.bind(this)
         
@@ -11,7 +11,7 @@ class CreateParentComment extends React.Component {
 
     updateComment(field) {
         return (e) => this.setState({
-            [field]: <e className="target value"></e>
+            [field]: e.target.value
         })
     }
 
@@ -20,13 +20,14 @@ class CreateParentComment extends React.Component {
         const that = this;
         this.props.createComment(this.state)
             .then(() => {
-                that.props.history.push(`/journals/${that.props.story.id}`)
+                that.props.history.push(`/stories/${that.props.story.id}`)
             })
     }
 
     render() {
         const { story } = this.props;
-
+        // console.log(this.props.history)
+        // console.log("this is the history")
         return (
             <div className="comments">
                 <h1>Showing comments for:</h1>
@@ -45,7 +46,7 @@ class CreateParentComment extends React.Component {
                         className="new-comment-body"
                         onChange={this.updateComment("body")}
                     ></textarea>
-                    <input className="submit-comment-button" type="submit" value="publish" />
+                    <input className="submit-comment-button" type="submit" value="Publish" />
                 </form>
             </div>
         )

@@ -23,6 +23,7 @@ import StoryDetailContainer from './stories/story_detail_container';
 import CategoriesBarContainer from './categories/category_container';
 import CreateParentCommentContainer from './comments/create_parent_comment_container';
 import CreateChildCommentContainer from './comments/create_child_comments_container';
+import Footer from './footer/footer';
 
 const App = () => (
     <div className="body">
@@ -92,6 +93,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
 
+        <Footer />
     </div>
 );
 

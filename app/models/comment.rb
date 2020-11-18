@@ -15,13 +15,13 @@ class Comment < ApplicationRecord
 
     belongs_to :story ,
         foreign_key: :story_id,
-        class_name: :Story
-    # inverse_of: :comments
+        class_name: :Story,
+        inverse_of: :comments
 
     belongs_to :author,
         foreign_key: :author_id,
-        class_name: :User
-        # inverse_of: :comments
+        class_name: :User,
+        inverse_of: :comments
 
     has_many :child_comments,
         foreign_key: :parent_comment_id,

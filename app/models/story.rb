@@ -22,8 +22,8 @@ class Story < ApplicationRecord
 
     has_many :comments,
         foreign_key: :story_id,
-        class_name: :Comment 
-    # inverse_of: :stories
+        class_name: :Comment,
+        inverse_of: :story
 
     # def comment_by_authors
         
@@ -33,10 +33,14 @@ class Story < ApplicationRecord
     def comments_by_parent
         comments_by_parent = Hash.new { |hash, key| hash[key] = [] }
 
-        parentStories = self.comments.includes(:parent_comment)
+        # parentStories = self.comments.includes(:parent_comment)
         # puts parentStories
         # byebug
-        parentStories.each do |comment|
+        # parentStories.each do |comment|
+        #     comments_by_parent[comment.parent_comment_id] << comment
+        # end
+
+        self.comments.includes(:parent_comment).each do |comment|
             comments_by_parent[comment.parent_comment_id] << comment
         end
 

@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class Api::CommentsController < ApplicationController
     
     def show
         @comment = Comment.includes(:author).find(params[:id])
@@ -18,13 +18,13 @@ class CommentsController < ApplicationController
 
     def update
         @comment = Comment.find(params[:id])
-        if @comment.upadate(comment_params)
-            render :show
-            return
-        else
-            render json: @comment.errors.full_messages, status: 422
-            return
-        end
+        if @comment.update(comment_params)
+                render :show
+                return 
+            else 
+                render json: @comment.errors.full_messages, status: 422
+                return
+            end
     end
 
     def destroy

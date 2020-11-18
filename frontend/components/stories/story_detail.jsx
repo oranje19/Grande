@@ -44,7 +44,7 @@ class StoryDetail extends React.Component {
         // if (!story || !user.followings) return null;
 
         if (!story) return null;
-        let followed = false;
+        // let followed = false;
 
         // user.followings.forEach((following) => {
         //     if (following.username == story.author) {
@@ -68,65 +68,109 @@ class StoryDetail extends React.Component {
                     );
                 })
                 : null
-            : null
+            : null;
 
         const placeHolderText = showComments
                 ? "Write a comment..."
                 : "Be the first to write a comment..."
 
-        // const followButton
-        // const followAction
         
-        if (story.author_id === undefined) {
-            return null
-        } else {
-
-            
-            return (
-                <>
-                    <div className="story-content">
-                        <ul className="story-detail">
-                            <li className="story-title">{story.title}</li>
-                            <li className="story-category">
-                                <Link to={`/categories/${story.category_id}/stories`}>
-                                    {story.category}
-                                </Link>
-                            </li>
-                            <li className="story-author-info">
-                                <div>{story.author[0]}</div>
-                                <div>
-                                    <div className="story-author-info-1">
-                                        <div>
-                                            <Link to={`/users/${user.id}/stories`}>{story.author}</Link>
-                                        </div>
-                                    </div>
-                                    <div className="story-author-info-2">
-                                        <div>{dateUtil(story.updated_at)}</div>
-                                        <i className="fas fa-circle"></i>
-                                        <div>{`${Math.floor(Math.random() * 10 + 2)} min read`}</div>
+        return (
+            <>
+                <div className="story-content">
+                    <ul className="story-detail">
+                        <li className="story-title">{story.title}</li>
+                        <li className="story-category">
+                            <Link to={`/categories/${story.category_id}/stories`}>
+                                {story.category}
+                            </Link>
+                        </li>
+                        <li className="story-author-info">
+                            <div>{story.author[0]}</div>
+                            <div>
+                                <div className="story-author-info-1">
+                                    <div>
+                                        <Link to={`/users/${user.id}/stories`}>{story.author}</Link>
                                     </div>
                                 </div>
-                            </li>
-                            <li className="story-body">
-                                <p>{story.body[0].toUpperCase()}</p>
-                                <div>{story.body.slice(1)}</div>
-                            </li>
-                        </ul>
-                    </div>
+                                <div className="story-author-info-2">
+                                    <div>{dateUtil(story.updated_at)}</div>
+                                    <i className="fas fa-circle"></i>
+                                    <div>{`${Math.floor(Math.random() * 10 + 2)} min read`}</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li className="story-body">
+                            <p>{story.body[0].toUpperCase()}</p>
+                            <div>{story.body.slice(1)}</div>
+                        </li>
+                    </ul>
+                </div>
 
-                    <div className="story-add-comment">
-                        <Link to={`/stories/${story.id}/newcomment`}>
-                            {placeHolderText}
-                        </Link>
-                    </div>
+                <div className="story-add-comment">
+                    <Link to={`/stories/${story.id}/newcomment`}>
+                        {placeHolderText}
+                    </Link>
+                </div>
 
-                    <div className="comments">
-                        <h1>Comments</h1>
-                        {showComments}
-                    </div>
-                </>
+                <div className="comments">
+                    <h1>Comments</h1>
+                    {showComments}
+                </div>
+            </>
         )
-    }
+
+
+    //     if (story.author_id === undefined) {
+    //         return null
+    //     } else {
+
+            
+    //         return (
+    //             <>
+    //                 <div className="story-content">
+    //                     <ul className="story-detail">
+    //                         <li className="story-title">{story.title}</li>
+    //                         <li className="story-category">
+    //                             <Link to={`/categories/${story.category_id}/stories`}>
+    //                                 {story.category}
+    //                             </Link>
+    //                         </li>
+    //                         <li className="story-author-info">
+    //                             <div>{story.author[0]}</div>
+    //                             <div>
+    //                                 <div className="story-author-info-1">
+    //                                     <div>
+    //                                         <Link to={`/users/${user.id}/stories`}>{story.author}</Link>
+    //                                     </div>
+    //                                 </div>
+    //                                 <div className="story-author-info-2">
+    //                                     <div>{dateUtil(story.updated_at)}</div>
+    //                                     <i className="fas fa-circle"></i>
+    //                                     <div>{`${Math.floor(Math.random() * 10 + 2)} min read`}</div>
+    //                                 </div>
+    //                             </div>
+    //                         </li>
+    //                         <li className="story-body">
+    //                             <p>{story.body[0].toUpperCase()}</p>
+    //                             <div>{story.body.slice(1)}</div>
+    //                         </li>
+    //                     </ul>
+    //                 </div>
+
+    //                 <div className="story-add-comment">
+    //                     <Link to={`/stories/${story.id}/newcomment`}>
+    //                         {placeHolderText}
+    //                     </Link>
+    //                 </div>
+
+    //                 <div className="comments">
+    //                     <h1>Comments</h1>
+    //                     {showComments}
+    //                 </div>
+    //             </>
+    //     )
+    // }
     }
     
 }
