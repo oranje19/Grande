@@ -33,7 +33,8 @@ const mapStateToProps = (state, ownProps) => {
         categories: Object.values(state.entities.categories),
         story: state.entities.stories[ownProps.match.params.storyId],
         buttonText: "Save and Publish",
-        storyId: parseInt(ownProps.match.params.storyId)
+        // storyId: parseInt(ownProps.match.params.storyId)
+        storyId: ownProps.match.params.storyId || ""
     };
 };
 

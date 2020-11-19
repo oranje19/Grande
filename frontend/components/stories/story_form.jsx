@@ -19,7 +19,7 @@ class StoryForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestAllCategories();
+        this.props.requestAllCategories;
     }
 
     update(field) {
