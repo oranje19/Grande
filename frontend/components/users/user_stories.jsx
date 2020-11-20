@@ -23,10 +23,18 @@ class UserStories extends React.Component {
         // debugger
         // this.stories = this.props.stories
 
-        const { stories, deleteStory } = this.props;
+        const { stories, deleteStory, user } = this.props;
+
         // console.log("THIS IS USER")
         // console.log(user)
-        let tempStory = Object.entries(stories)
+        let storyCount = 0
+        let tempStory = Object.entries(stories).map((story) => {
+            if (story[1].author === user.username) {
+                storyCount += 1
+            } else {
+                null
+            }
+        })
 
         if (!stories) return null;
 
@@ -38,8 +46,8 @@ class UserStories extends React.Component {
                         Write a story
                     </Link>
                 </div>
-                <div className="stories-count">Published {tempStory.length}</div>
-                <UserStoriesList stories={stories} deleteStory={deleteStory} />
+                <div className="stories-count">Published {storyCount}</div>
+                <UserStoriesList user={user} stories={stories} deleteStory={deleteStory} />
             </div>
         )
     }

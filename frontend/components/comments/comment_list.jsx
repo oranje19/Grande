@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 class CommentList extends React.Component {
     
@@ -33,11 +33,11 @@ class CommentList extends React.Component {
                         <div className="comment-body">
                             {comment.body}
                         </div>
-                        <div>
+                        {/* <div>
                             <Link className="new-child-comment" to={`/comments/${comment.id}/new`}>
                                 Write a comment
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="child-comments" 
