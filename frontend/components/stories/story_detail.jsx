@@ -40,6 +40,7 @@ class StoryDetail extends React.Component {
         // console.log(story)
         // console.log("above is the story")
         // console.log(user)
+        console.log(story)
 
         // if (!story || !user.followings) return null;
 
@@ -94,9 +95,10 @@ class StoryDetail extends React.Component {
                                     </div>
                                 </div>
                                 <div className="story-author-info-2">
-                                    <div>{dateUtil(story.updated_at)}</div>
+                                    <div className="story-date">{dateUtil(story.updated_at)}</div>
                                     <i className="fas fa-circle"></i>
-                                    <div>{`${Math.floor(Math.random() * 10 + 2)} min read`}</div>
+                                    {/* <div>{`${Math.floor(Math.random() * 10 + 2)} min read`}</div> */}
+                                    <div className="story-reading">{`${Math.ceil(story.body.split(" ").length / 200)} min read`}</div>
                                 </div>
                             </div>
                         </li>

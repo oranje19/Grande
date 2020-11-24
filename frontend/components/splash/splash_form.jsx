@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class Splash extends React.Component {
     
@@ -14,7 +15,11 @@ class Splash extends React.Component {
         const categoryList = categories.map((category) => (
             <button className="icons-button" key={category.id}>
                 <span className="hashtag-category"># </span>
-                <p>{category.title}</p>
+                <p>
+                    <Link to={`/categories/${category.id}/stories`}>
+                        {category.title}
+                    </Link>   
+                </p>
             </button>
         ));
 
